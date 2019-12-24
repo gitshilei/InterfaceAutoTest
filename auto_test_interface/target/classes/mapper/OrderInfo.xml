@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
+<mapper namespace="com.stone.auto.test.interfaces.dao.OrderInfoDao">
+    <!-- statement，内容：sql语句。id：唯一标识，随便写，在同一个命名空间下保持唯一
+       resultType：sql语句查询结果集的封装类型,tb_user即为数据库中的表
+     -->
+    <resultMap id="BaseMap" type="com.stone.auto.test.interfaces.entity.OrderInfo">
+        <result column="id" property="id"/>
+        <result column="driver_id" property="driver_id"/>
+        <result column="order_status" property="order_status"/>
+        <result column="order_id" property="order_id"/>
+        <result column="city_code" property="city_code"/>
+    </resultMap>
+    <select id="selectOrderByDriverId" resultMap="BaseMap">
+        select * from order_undone where driver_id = #{driverId}
+    </select>
+</mapper>
