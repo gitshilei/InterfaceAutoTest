@@ -4,3 +4,4 @@ getFileJsonArray
 getFileListMap
 getDBListMap
 getDBJsonArray
+httpRequest

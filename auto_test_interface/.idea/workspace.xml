@@ -54,7 +54,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testtools" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/task/demo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,6 +72,7 @@
       <recent name="com.stone.auto.test.interfaces.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\data\code\auto_test_interface\src\main\resources\task\demo" />
       <recent name="D:\data\code\auto_test_interface\src\main\resources\mapper" />
       <recent name="D:\data\code\auto_test_interface\web\WEB-INF" />
     </key>
@@ -98,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Case07.TestCase02">
+  <component name="RunManager" selected="TestNG.D:/data/code/auto_test_interface/src/main/resources/task/demo/bbb.xml">
     <configuration name="Case07" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auto_test_interface" />
       <extension name="coverage">
@@ -110,54 +111,6 @@
       <option name="PACKAGE_NAME" value="com.stone.auto.test.interfaces.poolCase.demo" />
       <option name="MAIN_CLASS_NAME" value="com.stone.auto.test.interfaces.poolCase.demo.Case07" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Case07.TestCase01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auto_test_interface" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.stone.auto.test.interfaces.poolCase.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.stone.auto.test.interfaces.poolCase.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.stone.auto.test.interfaces.poolCase.demo.Case07" />
-      <option name="METHOD_NAME" value="TestCase01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Case07.TestCase02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auto_test_interface" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.stone.auto.test.interfaces.poolCase.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.stone.auto.test.interfaces.poolCase.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.stone.auto.test.interfaces.poolCase.demo.Case07" />
-      <option name="METHOD_NAME" value="TestCase02" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderInfoDaoTest.selectOrderByDriverId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auto_test_interface" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.stone.auto.test.interfaces.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.stone.auto.test.interfaces.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.stone.auto.test.interfaces.dao.OrderInfoDaoTest" />
-      <option name="METHOD_NAME" value="selectOrderByDriverId" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -179,13 +132,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Case07.TestCase_Data" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="auto_test_interface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stone.auto.test.interfaces.poolCase.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stone.auto.test.interfaces.poolCase.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.stone.auto.test.interfaces.poolCase.demo.Case07" />
+      <option name="METHOD_NAME" value="TestCase_Data" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Case07.TestCase_DataProvider" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="auto_test_interface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.stone.auto.test.interfaces.poolCase.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.stone.auto.test.interfaces.poolCase.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.stone.auto.test.interfaces.poolCase.demo.Case07" />
+      <option name="METHOD_NAME" value="TestCase_DataProvider" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/data/code/auto_test_interface/src/main/resources/task/demo/bbb.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="auto_test_interface" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/task/demo/bbb.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Case07.TestCase02" />
-        <item itemvalue="JUnit.Case07" />
-        <item itemvalue="JUnit.Case07.TestCase01" />
-        <item itemvalue="JUnit.OrderInfoDaoTest.selectOrderByDriverId" />
+        <item itemvalue="TestNG.D:/data/code/auto_test_interface/src/main/resources/task/demo/bbb.xml" />
+        <item itemvalue="TestNG.Case07.TestCase_DataProvider" />
         <item itemvalue="TestNG.Case07" />
+        <item itemvalue="TestNG.Case07.TestCase_Data" />
+        <item itemvalue="JUnit.Case07" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +204,7 @@
       <workItem from="1575991627919" duration="561000" />
       <workItem from="1575992299969" duration="15304000" />
       <workItem from="1576073770412" duration="5377000" />
-      <workItem from="1576081107167" duration="143230000" />
+      <workItem from="1576081107167" duration="168939000" />
     </task>
     <servers />
   </component>
@@ -220,9 +219,17 @@
           <line>109</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/stone/auto/test/interfaces/poolCase/demo/Case01.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="formEntity" language="JAVA" />
+      </configuration>
       <configuration name="TestNG">
         <watch expression="extent.reportStatus" />
       </configuration>

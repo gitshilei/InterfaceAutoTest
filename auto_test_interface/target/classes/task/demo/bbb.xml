@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name="Suite1" parallel="methods"  thread-count="4">
+    <test name="Test1">
+        <classes>
+<!--
+            <parameter name="name" value="shilei" />
+            <parameter name="age"  value="28" />
+-->
+
+            <class  name="com.stone.auto.test.interfaces.poolCase.demo.Case07" />
+        </classes>
+    </test>
+    <listeners>
+<!--        <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter" />-->
+        <listener class-name="com.stone.auto.test.interfaces.util.reportsUtil.loadReports" />
+    </listeners>
+</suite>

@@ -1,11 +1,10 @@
 package com.stone.auto.test.interfaces.util.httpRequest;
 
-import com.alibaba.fastjson.JSONObject;
 
 public class QResponesData {
     private Integer qStatus;
-    private JSONObject qBody;
-    private Integer qTime;
+    private String qBody;
+    private Long qTime;
     private Long qSize;
 
     public Integer getqStatus() {
@@ -16,19 +15,19 @@ public class QResponesData {
         this.qStatus = qStatus;
     }
 
-    public JSONObject getqBody() {
+    public String getqBody() {
         return qBody;
     }
 
-    public void setqBody(JSONObject qBody) {
+    public void setqBody(String qBody) {
         this.qBody = qBody;
     }
 
-    public Integer getqTime() {
+    public Long getqTime() {
         return qTime;
     }
 
-    public void setqTime(Integer qTime) {
+    public void setqTime(Long qTime) {
         this.qTime = qTime;
     }
 
@@ -39,7 +38,5 @@ public class QResponesData {
     public void setqSize(Long qSize) {
         this.qSize = qSize;
     }
-
-
 
 }

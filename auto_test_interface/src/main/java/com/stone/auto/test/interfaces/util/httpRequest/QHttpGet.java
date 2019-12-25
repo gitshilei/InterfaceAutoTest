@@ -13,13 +13,14 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 public class QHttpGet implements ihttpRequest {
 
     @Override
-    public <Params> QResponesData httpRequest(String url, Params params) throws Exception
+    public <Params> QResponesData httpRequest(String url, Params... params) throws Exception
     {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         CloseableHttpResponse response = null;
@@ -27,44 +28,53 @@ public class QHttpGet implements ihttpRequest {
         StringBuilder result = new StringBuilder();
         boolean len0 = false;
         QResponesData qResponesData = new QResponesData();
+        Long beg;
+        Long end;
 
         try {
-            StringBuilder rparams = new StringBuilder();
-
-            if (params instanceof JSONObject)
+            if (params.length == 0)
             {
-                if (((JSONObject) params).size() <= 0) {
-                    len0 = true;
-                }
-                map = JSONObject.parseObject(((JSONObject) params).toJSONString(), new TypeReference<Map<String, String>>() {});
+                result.append(url);
             }
-            else if (params instanceof Map)
+            else
             {
-                if (((Map) params).size() <= 0)
+                StringBuilder rparams = new StringBuilder();
+
+                if (params[0] instanceof JSONObject)
                 {
-                    len0 = true;
+                    if (((JSONObject) params[0]).size() <= 0) {
+                        len0 = true;
+                    }
+                    map = JSONObject.parseObject(((JSONObject) params[0]).toJSONString(), new TypeReference<Map<String, String>>() {});
                 }
-                map = (Map<String, String>) params;
-            }
-            else
-            {
-                throw new IOException();
-            }
+                else if (params[0] instanceof Map)
+                {
+                    if (((Map) params[0]).size() <= 0)
+                    {
+                        len0 = true;
+                    }
+                    map = (Map<String, String>) params[0];
+                }
+                else
+                {
+                    throw new IOException();
+                }
 
-            if (!len0)
-            {
-                for (Map.Entry<String,String> entry:map.entrySet()) {
-                    rparams.append(entry);
-                    rparams.append("&");
+                if (!len0)
+                {
+                    for (Map.Entry<String,String> entry:map.entrySet()) {
+                        rparams.append(entry);
+                        rparams.append("&");
+                    }
+                    rparams.setLength(rparams.length() - 1);
+                    result.append(url);
+                    result.append("?");
+                    result.append(rparams);
                 }
-                rparams.setLength(rparams.length() - 1);
-                result.append(url);
-                result.append("?");
-                result.append(rparams);
-            }
-            else
-            {
-                result.append(url);
+                else
+                {
+                    result.append(url);
+                }
             }
 
             HttpGet httpGet = new HttpGet(result.toString());
@@ -84,15 +94,18 @@ public class QHttpGet implements ihttpRequest {
             httpGet.setConfig(requestConfig);
 
             // 由客户端执行(发送)Get请求
+            beg = System.currentTimeMillis();
             response = httpClient.execute(httpGet);
-
+            end = System.currentTimeMillis();
+            qResponesData.setqTime(end - beg);
             // 从响应模型中获取响应实体
             HttpEntity responseEntity = response.getEntity();
             qResponesData.setqStatus(response.getStatusLine().getStatusCode());
+            //System.out.println(response.getAllHeaders().length);
 
             if (responseEntity != null) {
                 qResponesData.setqSize(responseEntity.getContentLength());
-                qResponesData.setqBody(JSONObject.parseObject(EntityUtils.toString(responseEntity)));
+                qResponesData.setqBody(EntityUtils.toString(responseEntity));
             }
 
         } catch (ParseException e) {
